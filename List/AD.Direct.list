@@ -1,12 +1,11 @@
 # NAME: AD.Direct in module
 # AUTHOR: Julia
 # REPO: https://github.com/julia/com/List 
-# UPDATED: 2024-10-1 16:10
+# UPDATED: 2024-10-19 16:43
 
 # 放行的域 
 .speedtest.cn
 .goatcounter.com
-#.hdslb.com
 .ok-skins.com
 
 

@@ -1,0 +1,100 @@
+# NAME: Direct
+# AUTHOR: Julia
+# REPO: https://github.com/julia/com/List 
+# UPDATED: 2024-10-19 17:16
+
+# https://ruleset.skk.moe/List/non_ip/direct.conf
+# https://github.com/blackmatrix7/ios_rule_script
+DOMAIN-SUFFIX,lan
+DOMAIN-SUFFIX,m2m
+DOMAIN-SUFFIX,_tcp
+DOMAIN-SUFFIX,home
+DOMAIN-SUFFIX,bogon
+DOMAIN,unifi
+DOMAIN-SUFFIX,_msdcs
+DOMAIN-SUFFIX,router
+DOMAIN,router.com
+
+DOMAIN,captive.apple.com
+DOMAIN,local.adguard.org
+DOMAIN,injections.adguard.org
+
+DOMAIN-SUFFIX,10.in-addr.arpa
+DOMAIN-SUFFIX,254.169.in-addr.arpa
+DOMAIN-SUFFIX,16.172.in-addr.arpa
+DOMAIN-SUFFIX,17.172.in-addr.arpa
+DOMAIN-SUFFIX,18.172.in-addr.arpa
+DOMAIN-SUFFIX,19.172.in-addr.arpa
+DOMAIN-SUFFIX,20.172.in-addr.arpa
+DOMAIN-SUFFIX,21.172.in-addr.arpa
+DOMAIN-SUFFIX,22.172.in-addr.arpa
+DOMAIN-SUFFIX,23.172.in-addr.arpa
+DOMAIN-SUFFIX,24.172.in-addr.arpa
+DOMAIN-SUFFIX,25.172.in-addr.arpa
+DOMAIN-SUFFIX,26.172.in-addr.arpa
+DOMAIN-SUFFIX,27.172.in-addr.arpa
+DOMAIN-SUFFIX,28.172.in-addr.arpa
+DOMAIN-SUFFIX,29.172.in-addr.arpa
+DOMAIN-SUFFIX,30.172.in-addr.arpa
+DOMAIN-SUFFIX,31.172.in-addr.arpa
+DOMAIN-SUFFIX,168.192.in-addr.arpa
+DOMAIN-KEYWORD,cnki.net
+DOMAIN-KEYWORD,wanfangdata
+DOMAIN-KEYWORD,pkulaw
+DOMAIN-KEYWORD,westlawchina
+DOMAIN-KEYWORD,readcube
+DOMAIN-KEYWORD,sciencedirect
+DOMAIN-KEYWORD,elsevier
+DOMAIN-KEYWORD,deepdyve
+DOMAIN-KEYWORD,els-cdn
+DOMAIN-SUFFIX,qbittorrent.org
+DOMAIN-KEYWORD,aria2
+DOMAIN-KEYWORD,thunder
+DOMAIN-KEYWORD,xlliveud
+DOMAIN-KEYWORD,xunlei
+DOMAIN-KEYWORD,yunpan
+USER-AGENT,%E8%BF%85%E9%9B%B7
+URL-REGEX,assets\d+\.xboxlive\.(com|cn)
+PROCESS-NAME,v2ray
+PROCESS-NAME,xray
+PROCESS-NAME,ss-local
+PROCESS-NAME,clash
+PROCESS-NAME,ClashX
+PROCESS-NAME,trojan
+PROCESS-NAME,trojan-go
+PROCESS-NAME,privoxy
+PROCESS-NAME,cloudflared
+PROCESS-NAME,aria2c
+PROCESS-NAME,fdm
+PROCESS-NAME,Folx
+PROCESS-NAME,NetTransport
+PROCESS-NAME,Thunder
+PROCESS-NAME,ThunderVIP
+PROCESS-NAME,Transmission
+PROCESS-NAME,transmission-daemon
+PROCESS-NAME,transmission-qt
+PROCESS-NAME,BitComet
+PROCESS-NAME,uTorrent
+PROCESS-NAME,qbittorrent*
+PROCESS-NAME,DownloadService
+PROCESS-NAME,qBittorrent
+PROCESS-NAME,qbittorrent-nox
+PROCESS-NAME,WebTorrent
+PROCESS-NAME,WebTorrent Helper
+PROCESS-NAME,amuled
+PROCESS-NAME,LocalSend
+PROCESS-NAME,UUBooster
+PROCESS-NAME,tailscaled
+PROCESS-NAME,parsecd
+PROCESS-NAME,SunloginClient_Desktop
+PROCESS-NAME,SunloginClient_Helper
+PROCESS-NAME,BaiduNetdisk_mac
+PROCESS-NAME,Logi Options
+PROCESS-NAME,Logi Options Daemon
+PROCESS-NAME,Weiyun
+
+
+
+
+
+

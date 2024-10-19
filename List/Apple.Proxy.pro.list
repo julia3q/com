@@ -1,11 +1,10 @@
 # NAME: Apple Proxy+
-# UPDATED: 2024-10-18 15:21
+# UPDATED: 2024-10-19 16:50
 
-#  解鎖需要的域 Siri & Spotlight、iCloud Private Relay、Podcasts、iBooks、Map beta、Weather beta
+#  解鎖需要的域 Siri & Spotlight、Podcasts、iBooks、Map beta、Weather beta
 #  
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
-#  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
 #  https://mask-api.icloud.com/egress-ip-ranges.csv
 #
 #  USER-AGENT 待補齊
@@ -25,23 +24,6 @@ DOMAIN-SUFFIX,e16991.b.akamaiedge.net
 
 PROCESS-NAME,/System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
 DOMAIN-SUFFIX,smoot.apple.com
-
-#! ☁️ iCloud Private Relay
-# https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
-# Private Relay API
-USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
-DOMAIN,mask-api.icloud.com
-DOMAIN,mask-api.fe.apple-dns.net
-
-# iCloud Private Relay
-# https://mask-api.icloud.com/egress-ip-ranges.csv
-# Allow for network traffic audits
-DOMAIN,mask.icloud.com
-DOMAIN,mask.apple-dns.net
-DOMAIN,mask-canary.icloud.com
-DOMAIN,canary.mask.apple-dns.net
-DOMAIN,mask-h2.icloud.com
-DOMAIN,mask-t.apple-dns.net
 
 # Podcasts
 DOMAIN,player.soundon.fm

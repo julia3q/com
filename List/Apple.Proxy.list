@@ -1,8 +1,8 @@
 # NAME: Apple Proxy
-# UPDATED: 2024-10-18 11:50
+# UPDATED: 2024-10-19 16:49
 
-#  加速 Apple iCloud、App Store、TV+、Music、iTunes、iMessage、Facetime
-#
+#  加速 Apple iCloud、App Store、TV+、Music、iTunes、iMessage、Facetime、
+#  *iCloud Private Relay-解鎖
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
 #  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
@@ -15,6 +15,23 @@ DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,icloud.apple.com
 DOMAIN-SUFFIX,apple-cloudkit.com
+
+#! ☁️ iCloud Private Relay
+# https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
+# Private Relay API
+USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
+DOMAIN,mask-api.icloud.com
+DOMAIN,mask-api.fe.apple-dns.net
+
+# iCloud Private Relay
+# https://mask-api.icloud.com/egress-ip-ranges.csv
+# Allow for network traffic audits
+DOMAIN,mask.icloud.com
+DOMAIN,mask.apple-dns.net
+DOMAIN,mask-canary.icloud.com
+DOMAIN,canary.mask.apple-dns.net
+DOMAIN,mask-h2.icloud.com
+DOMAIN,mask-t.apple-dns.net
 
 #! Mail
 DOMAIN-SUFFIX,mail.me.com
@@ -31,6 +48,8 @@ DOMAIN-SUFFIX,ess.apple.com
 #! testflight
 DOMAIN-SUFFIX,testflight.apple.com
 
+USER-AGENT,com.apple.trustd*
+
 #! 更新 - US Proxy
 # > Mac OS 的 App Store 服务器
 DOMAIN-SUFFIX,swscan.apple.com
@@ -46,16 +65,11 @@ DOMAIN-SUFFIX,bpapi.apple.com
 #! macOS Rosetta 2 更新
 DOMAIN-SUFFIX,configuration.apple.com
 
-
 #! Apple URL Shortener
 DOMAIN-SUFFIX,apple.co
 
 #! 地圖其它功能
 DOMAIN,apple-mapkit.com
-
-#!
-DOMAIN-SUFFIX,apple-dns.net
-
 
 #! > App Store
 DOMAIN-SUFFIX,mesu.apple.com
@@ -68,7 +82,6 @@ PROCESS-NAME,storedownloadd
 
 DOMAIN,guzzoni.apple.com
 DOMAIN,mzstatic.com
-
 
 #! Apple itunes/ Music
 # Music Web
@@ -90,18 +103,20 @@ DOMAIN,apptrailers.itunes.apple.com
 DOMAIN-SUFFIX,developer.apple.com
 DOMAIN-SUFFIX,devimages-cdn.apple.com
 DOMAIN-SUFFIX,devstreaming-cdn.apple.com
+
+#!
+DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,init-p01md.apple.com
 DOMAIN-SUFFIX,www.apple.com
 
-USER-AGENT,com.apple.trustd*
-
+#! Apple IP
 IP-CIDR,17.0.0.0/8,no-resolve
-#IP-CIDR,63.92.224.0/19,no-resolve
-#IP-CIDR,65.199.22.0/23,no-resolve
+IP-CIDR,63.92.224.0/19,no-resolve
+IP-CIDR,65.199.22.0/23,no-resolve
 IP-CIDR,139.178.128.0/18,no-resolve
-#IP-CIDR,144.178.0.0/19,no-resolve
-#IP-CIDR,144.178.36.0/22,no-resolve
-#IP-CIDR,144.178.48.0/20,no-resolve
+IP-CIDR,144.178.0.0/19,no-resolve
+IP-CIDR,144.178.36.0/22,no-resolve
+IP-CIDR,144.178.48.0/20,no-resolve
 IP-CIDR,192.35.50.0/24,no-resolve
 IP-CIDR,198.183.17.0/24,no-resolve
-#IP-CIDR,205.180.175.0/24,no-resolve
+IP-CIDR,205.180.175.0/24,no-resolve

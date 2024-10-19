@@ -1,8 +1,9 @@
-#!name=BlockAD-TW
+#!name=BlockAD-TW beta
 #!desc=TW 環境去除廣告。v2024.10.17
 #!category=阻斷廣告
 
 [Rule]
+# 準備修改
 #! Line 錢包頁中間的橫幅
 URL-REGEX,^https:\/\/vos\.line-scdn\.net\/wallet\/banner\/WalletTab_Middle,REJECT
 #! Line 新聞
