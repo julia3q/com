@@ -7,13 +7,12 @@
 DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Direct.list,DIRECT
 
 # sukka-reject
-# extended-matching 參數僅適用於DOMAIN 、 DOMAIN-SUFFIX 、 DOMAIN-KEYWORD規則。
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
 
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching
 
 # sukka-rejectIP
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP

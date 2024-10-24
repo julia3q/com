@@ -109,6 +109,9 @@ DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,init-p01md.apple.com
 DOMAIN-SUFFIX,www.apple.com
 
+#! Siri Requests
+
+
 #! Apple IP
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
