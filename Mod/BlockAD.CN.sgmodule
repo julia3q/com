@@ -1,18 +1,24 @@
 #!name=BlockAD-CN
 #!desc=CN 環境去除廣告。2024.10.17
 #!category=阻斷廣告
+#!system=ios
 
 [Rule]
+# > ----- 行動網路 Rule -----
 #! 誤殺放行
-DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Direct.list,DIRECT
+DOMAIN-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Direct.list,DIRECT,extended-matching
+
+# > Reject
+# 通用去追蹤
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,extended-matching
 
 # sukka-reject
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,extended-matching
-
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching
-
 # sukka-rejectIP
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
+
+# > ----- 行動網路 Rule -----
