@@ -2,19 +2,18 @@
 #!desc=優先判斷 Apple.Service。2024.12.29
 #!category=🍎 Apple
 #!arguments = Connect-Default:"🍎 Apple",Connect-US:"美國"
-#!arguments-desc = Connect-Default: [🍎 Apple] \n Connect-US [美國] 
+#!arguments-desc = Connect-Default: [🍎 Apple] \n Connect-US: [美國] 
 
 
 [Rule]
- > ----- iOS Rule -----
+ > ----- Apple.Service Rule -----
 # 測試中
-# > Apple.Service 優先判斷
 DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
 # Apple Intelligence
-DOMAIN-SUFFIX,apple-relay.cloudflare.com,{{{Connect-US}}},extended-matching
-DOMAIN-SUFFIX,apple-relay.apple.com,{{{Connect-US}}},extended-matching
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,"{{{Connect-US}}}",extended-matching
+DOMAIN-SUFFIX,apple-relay.apple.com,"{{{Connect-US}}}",extended-matching
 
-#DOMAIN,xp.apple.com,{{{Connect-Default}}},extended-matching
+#DOMAIN,xp.apple.com,"{{{Connect-Default}}}",extended-matching
 DOMAIN,iadsdk.apple.com,"{{{Connect-Default}}}",extended-matching
 DOMAIN,metrics.icloud.com,"{{{Connect-Default}}}",extended-matching
 
