@@ -11,14 +11,15 @@ DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
 DOMAIN-SUFFIX,apple-relay.cloudflare.com,"{{{ConnectUS}}}",extended-matching
 DOMAIN-SUFFIX,apple-relay.apple.com,"{{{ConnectUS}}}",extended-matching
 
-#DOMAIN,xp.apple.com,"{{{ConnectDefault}}}",extended-matching
+# DOMAIN,xp.apple.com,"{{{ConnectDefault}}}",extended-matching
 DOMAIN,iadsdk.apple.com,"{{{ConnectDefault}}}",extended-matching
 DOMAIN,metrics.icloud.com,"{{{ConnectDefault}}}",extended-matching
 
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,"{{{ConnectDefault}}}"
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,"{{{ConnectDefault}}}"
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
+# RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/custom.AppleProxy.list,"{{{ConnectDefault}}}"
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,"{{{ConnectDefault}}}"
+
 
 
 

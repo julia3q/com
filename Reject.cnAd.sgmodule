@@ -14,11 +14,11 @@ RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,R
 
 # > --sukka-reject Rule Start --
 # 感謝 sukka https://ruleset.skk.moe/
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,pre-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,extended-matching,pre-matching
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,pre-matching
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,pre-matching,extended-matching
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,DIRECT,extended-matching
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,DIRECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching,pre-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching,pre-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,pre-matching
 # sukka-rejectIP
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
