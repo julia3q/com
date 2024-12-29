@@ -1,0 +1,28 @@
+#!name=custom.Appleconnrct
+#!desc=優先判斷 Apple.Service。2024.12.29
+#!category=🍎 Apple
+#!arguments = Connect-Default:"🍎 Apple",Connect-US:"美國"
+#!arguments-desc = Connect-Default: [🍎 Apple] \n Connect-US [美國] 
+
+
+[Rule]
+ > ----- iOS Rule -----
+# 測試中
+# > Apple.Service 優先判斷
+DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
+# Apple Intelligence
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,{{{Connect-US}}},extended-matching
+DOMAIN-SUFFIX,apple-relay.apple.com,{{{Connect-US}}},extended-matching
+
+#DOMAIN,xp.apple.com,{{{Connect-Default}}},extended-matching
+DOMAIN,iadsdk.apple.com,"{{{Connect-Default}}}",extended-matching
+DOMAIN,metrics.icloud.com,"{{{Connect-Default}}}",extended-matching
+
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,"{{{Connect-Default}}}"
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,"{{{Connect-Default}}}"
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/custom.AppleProxy.list,"{{{Connect-Default}}}"
+
+
+
+

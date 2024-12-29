@@ -1,0 +1,32 @@
+#!name=Reject.cnAD
+#!desc=阻斷廣告·cn。2024.12.29
+#!category=阻斷廣告
+#!system=ios
+
+[Rule]
+# apple 
+#DOMAIN,xp.apple.com,Proxy,extended-matching
+DOMAIN,iadsdk.apple.com,Proxy,extended-matching
+DOMAIN,metrics.icloud.com,Proxy,extended-matching
+
+# 放行的域 
+DOMAIN-SUFFIX,speedtest.cn,DIRECT,extended-matching
+DOMAIN-SUFFIX,goatcounter.com,DIRECT,extended-matching
+
+
+# > ----- 行動網路 Rule -----
+# 通用-去追蹤
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,pre-matching,extended-matching
+
+# 感謝 sukka https://ruleset.skk.moe/
+# sukka-reject
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,pre-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,pre-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,pre-matching,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,DIRECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,DIRECT,extended-matching
+
+# sukka-rejectIP
+RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
+
+# > ----- 行動網路 Rule -----

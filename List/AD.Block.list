@@ -1,24 +1,22 @@
-# NAME: AD.Block
+# NAME: AD.Block 通用-阻斷追蹤
 # AUTHOR: Julia
-# REPO: https://github.com/julia/com/List
-# UPDATED: 2024-10-17 14:36:45
+# REPO: https://github.com/julia3q/com/List 
+# UPDATED: 2024-12-29 15:23
 
-#修改
 #! 通用去追蹤
 DOMAIN-KEYWORD,app-site.association
 DOMAIN-KEYWORD,anylist.c.appier.net
-DOMAIN-KEYWORD,analytics
 DOMAIN-KEYWORD,sessions.bugsnag.com
-DOMAIN-KEYWORD,crashlytics
 DOMAIN-KEYWORD,gz-data.com
 DOMAIN-KEYWORD,track
 DOMAIN-KEYWORD,tracking
 DOMAIN-KEYWORD,safebrowsing
 DOMAIN-KEYWORD,gz-data.com
 DOMAIN-KEYWORD,collector
-
-#!-- 
-DOMAIN,itad.linetv.tw
+DOMAIN-KEYWORD,analysis
+DOMAIN-KEYWORD,analysys
+DOMAIN-KEYWORD,analytics
+DOMAIN-KEYWORD,crashlytics
 DOMAIN-KEYWORD,admarvel
 DOMAIN-KEYWORD,admaster
 DOMAIN-KEYWORD,admdfs
@@ -35,9 +33,6 @@ DOMAIN-KEYWORD,adsystem
 DOMAIN-KEYWORD,advert
 DOMAIN-KEYWORD,adwords
 DOMAIN-KEYWORD,allyes
-DOMAIN-KEYWORD,analysis
-DOMAIN-KEYWORD,analysys
-DOMAIN-KEYWORD,analytics
 DOMAIN-KEYWORD,app-measurement
 DOMAIN-KEYWORD,applovin
 DOMAIN-KEYWORD,appsflyer
@@ -68,7 +63,6 @@ DOMAIN-KEYWORD,zjtoolbar
 DOMAIN,admob.com
 DOMAIN,flurry.com
 DOMAIN,mopub.com
-
 
 
 

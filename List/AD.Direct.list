@@ -1,17 +1,9 @@
-# NAME: AD.Direct in module
+# NAME: AD.Direct on module
 # AUTHOR: Julia
-# REPO: https://github.com/julia/com/List 
-# UPDATED: 2024-10-19 16:43
+# REPO: https://github.com/julia3q/com/List 
+# UPDATED: 2024-12-29 15:23
 
-# apple 
-.xp.apple.com
-.iadsdk.apple.com
-.metrics.icloud.com
 
-# 放行的域 
-.speedtest.cn
-.goatcounter.com
-.ok-skins.com
 
 
 
