@@ -1,19 +1,16 @@
 # NAME: AppleProxy
-# UPDATED: 2024-12-29 13:45
+# UPDATED: 2025-01-02 15:33
 # custom.for.owl
 #  Source:
 #  https://support.apple.com/zh-tw/HT210060
 #  https://developer.apple.com/cn/support/prepare-your-network-for-icloud-private-relay/
 #  https://mask-api.icloud.com/egress-ip-ranges.csv
-#  https://github.com/geekdada/surge-list/blob/master/surgio-snippet/apple.tpl
 #----------------------------------------
 
-#
-DOMAIN,apps.apple.com
-DOMAIN,itunes.apple.com
-
 #! GeoServices / Country Code
-DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com 
+DOMAIN-SUFFIX,gspe21-ssl.ls.apple.com
+DOMAIN-SUFFIX,gspe21.ls.apple.com
 PROCESS-NAME,com.apple.geod
 
 #! ☁️ iCloud
@@ -37,10 +34,6 @@ DOMAIN,canary.mask.apple-dns.net
 DOMAIN,mask-h2.icloud.com
 DOMAIN,mask-t.apple-dns.net
 
-# 
-DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe21-ssl.ls.apple.com
-DOMAIN-SUFFIX,gspe21.ls.apple.com
 
 #! iMessage 和 Facetime 服务器
 DOMAIN-SUFFIX,ess.apple.com
@@ -48,81 +41,21 @@ DOMAIN-SUFFIX,ess.apple.com
 #! testflight
 DOMAIN-SUFFIX,testflight.apple.com
 
-#! Apple URL Shortener
-DOMAIN-SUFFIX,apple.co
-
 #! Siri & Spotlight
 #! Siri Requests
-PROCESS-NAME,LookupViewService
-PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
 DOMAIN,lookup-api.apple.com
 DOMAIN,lookup-api.apple.com.edgekey.net
 DOMAIN-SUFFIX,e16991.b.akamaiedge.net
-
 DOMAIN-SUFFIX,smoot.apple.com
-PROCESS-NAME,/System/Library/PrivateFrameworks/CoreParsec.framework/parsecd
-
-# TV 解鎖
-DOMAIN,play-edge.itunes.apple.com
-DOMAIN,play.itunes.apple.com
-DOMAIN,uts-api.itunes.apple.com
-DOMAIN,umc-tempo-api.apple.com
+PROCESS-NAME,LookupViewService
+PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/LookupViewService.xpc/Contents/MacOS/LookupViewService
 
 # 地圖
-DOMAIN,gspe35-ssl.ls.apple.com
+DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
 DOMAIN,apple-livephotoskit.com
 DOMAIN,apple-mapkit.com
 PROCESS-NAME,com.apple.Maps
 PROCESS-NAME,trustd
 
-# Podcasts
-DOMAIN,player.soundon.fm
-DOMAIN-SUFFIX,podcasts.apple.com
-#DOMAIN,amp-api.podcasts.apple.com
-
-# iBooks
-DOMAIN-SUFFIX,books.apple.com
-
-
-#! Apple itunes/ Music
-# Music Web
-DOMAIN,beta.music.apple.com
-DOMAIN,js-cdn.music.apple.com
-DOMAIN,radio.itunes.apple.com
-DOMAIN,audio-ssl.itunes.apple.com
-
-# Trailer
-DOMAIN,hls.itunes.apple.com
-DOMAIN,hls-amt.itunes.apple.com
-
-
-#
-# Apple Global CDN
-#
-# iOS App Store
-DOMAIN,iosapps.itunes.apple.com
-# Mac App Store
-DOMAIN,osxapps.itunes.apple.com
-DOMAIN,oscdn.apple.com
-# App Store & iTunes Images
-DOMAIN-SUFFIX,mzstatic.com
-# Mac App Store
-PROCESS-NAME,storedownloadd
-# iOS App Store
-USER-AGENT,com.apple.appstored*
-# iTunes
-DOMAIN,aod.itunes.apple.com
-DOMAIN,mvod.itunes.apple.com
-DOMAIN,streamingaudio.itunes.apple.com
-DOMAIN,apptrailers.itunes.apple.com
-# Other
-DOMAIN,download.developer.apple.com
-DOMAIN,downloaddispatch.itunes.apple.com
-
-# Update
-#DOMAIN,supportdownload.apple.com
-#DOMAIN,appldnld.apple.com
-#DOMAIN,appldnld.apple.com.edgesuite.net
-#DOMAIN,swcdn.apple.com
-#DOMAIN,updates-http.cdn-apple.com
-#DOMAIN,updates.cdn-apple.com
+#! Apple URL Shortener
+DOMAIN-SUFFIX,apple.co
