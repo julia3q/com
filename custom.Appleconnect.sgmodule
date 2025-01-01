@@ -1,8 +1,8 @@
 #!name=custom.Appleconnect
 #!desc=測試中-優先判斷 Apple.Service。2024.12.29
 #!category=Apple
-#!arguments = ConnectDefault:"🍎 Apple",ConnectUS:"美國"
-#!arguments-desc = ConnectDefault: 🍎 Apple \n ConnectUS: 美國 
+#!arguments = ConnectDefault:"🍎 Apple",ConnectUS:"美國",ConnectLowSpeed:"🚗 低速"
+#!arguments-desc = ConnectDefault: 🍎 Apple \n ConnectUS: 美國  \nConnectLowSpeed:🚗 低速
 
 [Rule]
 # > --- Apple.Service Rule Start --
@@ -20,4 +20,5 @@ DOMAIN,metrics.icloud.com,"{{{ConnectDefault}}}",extended-matching
 
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AppleProxy.list,"{{{ConnectDefault}}}"
+RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AppleStore.list,"{{{ConnectLowSpeed}}}"
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,"{{{ConnectDefault}}}"
