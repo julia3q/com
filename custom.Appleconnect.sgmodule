@@ -1,5 +1,5 @@
 #!name=custom.Appleconnect
-#!desc=測試中-優先判斷 Apple.Service。2025-01-02
+#!desc=測試中-優先判斷 Apple.Service。2025-01-16
 #!category=Apple
 #!arguments = ConnectDefault:"🍎 Apple",ConnectUS:"美國",ConnectLowSpeed:"🚗 低速",ConnectDIRECT:"DIRECT"
 #!arguments-desc = ConnectDefault: 🍎 Apple \n ConnectUS: 美國  \nConnectLowSpeed:🚗 低速 \nConnectDIRECT:DIRECT 
@@ -17,7 +17,7 @@ DOMAIN-SUFFIX,apple-relay.apple.com,"{{{ConnectUS}}}",extended-matching
 DOMAIN,iadsdk.apple.com,"{{{ConnectDefault}}}",extended-matching
 DOMAIN,metrics.icloud.com,"{{{ConnectDefault}}}",extended-matching
 
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,"{{{ConnectLowSpeed}}}"
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,"{{{ConnectDIRECT}}}"
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AppleStore.list,"{{{ConnectLowSpeed}}}",extended-matching
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AppleStream.list,"{{{ConnectLowSpeed}}}",extended-matching
 RULE-SET,https://raw.githubusercontent.com/julia3q/Surge/main/List/AppleProxy.list,"{{{ConnectDefault}}}",extended-matching
