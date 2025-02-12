@@ -1,10 +1,10 @@
 #!name=Reject.twAD
-#!desc=測試中-阻斷廣告·tw。2024.12.29
+#!desc=測試中-阻斷廣告·tw。2025.02.12
 #!category=阻斷廣告
 #!system=ios
 
 [Rule]
-# 本模組使用使用一下各位大神的創作，我簡單修改整合為自用。
+# 本模組使用各位大神的創作，我簡單修改整合為自用。
 #https://filter.futa.gg/Surge/filters.txt
 #Make Futa Great Again! v20231207.01
 #! Line 錢包頁中間的橫幅
@@ -20,27 +20,21 @@ URL-REGEX,^https:\/\/bilanx\.dcard\.tw\/v\d\/configs$,REJECT
 #! PTT 相關
 URL-REGEX,^https:\/\/pttbrain\.herokuapp\.com\/api\/ptt\/metric\/user\-geo\-distributions,REJECT
 
-#! pixnet
-URL-REGEX,^https:\/\/front\.pixfs\.net\/module\/idlePop\/js\/,REJECT
-
 #https://raw.githubusercontent.com/jkgtw/Surge/master/Modules/LINE-ADs.sgmodule
-#刪掉 LINE 惱人的廣告 v20241204.02 - 需啟用 MitM over HTTP/2
+#刪掉 LINE 惱人的廣告 v20250120.01 - 需啟用 MitM over HTTP/2
 URL-REGEX,^https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\?,REJECT-TINYGIF
 URL-REGEX,^https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image,REJECT-TINYGIF
 URL-REGEX,^https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$,REJECT-DROP
 URL-REGEX,^https:\/\/a\.line\.me\/oa\/v\d\/e$,REJECT-DROP
 URL-REGEX,^https:\/\/a\.line\.me\/cs\/v\d\/oa$,REJECT-DROP
-URL-REGEX,^https:\/\/ad\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$,REJECT-TINYGIF
+URL-REGEX,^https:\/\/ad\.line-scdn\.net\/0h,REJECT
 URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$,REJECT
 URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$,REJECT
 URL-REGEX,^https:\/\/gw\.line\.naver\.jp\/tr\/event$,REJECT
 URL-REGEX,^https:\/\/lan\.line\.me\/v1\/line\/ios,REJECT
 URL-REGEX,^https:\/\/legy\.line-apps\.com:443\/ext\/lgfp\/lad\/v1$,REJECT
-URL-REGEX,^https:\/\/legy\.line-apps\.com\/ext\/lgfp\/lad\/v1$,REJECT
 URL-REGEX,^https:\/\/legy\.line-apps\.com:443\/ext\/smartch\/banner\/sch\/v1$,REJECT
-URL-REGEX,^https:\/\/legy\.line-apps\.com\/ext\/smartch\/banner\/sch\/v1$,REJECT
 URL-REGEX,^https:\/\/legy\.line-apps\.com:443\/tr\/event$,REJECT
-URL-REGEX,^https:\/\/legy\.line-apps\.com\/tr\/event$,REJECT
 URL-REGEX,^https:\/\/web-mmap-pay\.line-apps\.com\/tw\/liff\/campaign\/v1\/aggregate\/ad\/banner\/,REJECT-TINYGIF
 URL-REGEX,^https:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/,REJECT-DROP
 URL-REGEX,^https:\/\/buy\.line\.me\/api\/graphql\?variables,REJECT
@@ -61,8 +55,9 @@ URL-REGEX,^https:\/\/static\.line-scdn\.net\/ad-sdk\/,REJECT
 URL-REGEX,^https:\/\/nelo2-col\.linecorp\.com\/_store$,REJECT
 
 
+
 #https://github.com/liaojack8/Surge
-#把LINE VOOM 擋起來
+#封鎖 LINE VOOM 的功能，手機將不再加載智障影片 v20241207.01 - 需啟用 MitM over HTTP/2
 URL-REGEX,^https://voom-obs.line-scdn.net*,REJECT
 
 #Block videohub for streaming idiot vids
@@ -96,10 +91,5 @@ URL-REGEX,^https://legy.line-apps.com*.*/tl/*.*?/discover/api/v*.*,REJECT
 URL-REGEX,^https://sentry-uit.line-apps.com/*.*,REJECT
 
 
-#https://kinta.ma/surge/modules/facebook_block_sdk.sgmodule
-#不影響 Facebook App 本身，但會禁止第三方 App 使用 Facebook 登入。
-#iOS 15 由於系統預設行為變動，目前無法將 Facebook 自家 App 設為白名單。 v20210927
-AND,((NOT,((USER-AGENT,*FBAN/FBIOS;*))), (NOT,((USER-AGENT,*FBAN/FBPageAdmin;*))), (NOT,((USER-AGENT,*FBAN/MessengerLiteForiOS;*))), (NOT,((USER-AGENT,Instagram*))), (NOT,((USER-AGENT,Messenger*))), (DOMAIN,graph.facebook.com)),REJECT
-
 [MITM]
-hostname = %APPEND% crs-event.line.me, api.today.line.me, mangaapi.manhuaren.com, mangaapi.manhuaren.net, bilanx.dcard.tw, pttbrain.herokuapp.com, front.pixfs.net ,a.line.me, ad.line-scdn.net, w.line.me, gw.line.naver.jp, lan.line.me, legy.line-apps.com, buy.line.me, crs-event.line.me, obs.line-scdn.net, cix.line-apps.com, d.line-scdn.net, scdn.line-apps.com, web-mmap-pay.line-apps.com, sch.line.me, uts-front.line-apps.com, static.line-scdn.net, nelo2-col.linecorp.com, sentry-uit.line-apps.com, legy.line-apps.com, voom-obs.line-scdn.net
+hostname = %APPEND% a.line.me, ad.line-scdn.net, w.line.me, gw.line.naver.jp, lan.line.me, buy.line.me, crs-event.line.me, obs.line-scdn.net, d.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, nelo2-col.linecorp.com, uts-front.line-apps.com, cix.line-apps.com, scdn.line-apps.com, legy.line-apps.com, sentry-uit.line-apps.com, voom-obs.line-scdn.net
