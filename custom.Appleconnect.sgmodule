@@ -1,20 +1,19 @@
 #!name=Custom.Apple Service Connect
 #!desc=自訂蘋果服務連接模式 2025-03-10
 #!category=Apple
-#!arguments = Default:"🍎 Apple",US:"美國",Low:"🚗 低速",off:"DIRECT"
-#!arguments-desc = Default:🍎 Apple\n US: 美國\n Low:🚗 低速\n off:DIRECT
+#!arguments = Default:🍎 Apple,US:"美國",Low:🚗 低速,Off:"DIRECT"
+#!arguments-desc =  Default:🍎 Apple\n  US: 美國\n  Low:🚗 低速\n  Off:DIRECT
 
 [Rule]
 # > --- Apple.Service Rule Start --
+# 檢測阻斷
+DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
 
 DOMAIN,xp.apple.com,"{{{Default}}}",extended-matching
 
 # 解除 macOS 緩存
 DOMAIN,iadsdk.apple.com,"{{{Default}}}",extended-matching
 DOMAIN,metrics.icloud.com,"{{{Default}}}",extended-matching
-
-# 檢測阻斷
-DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
 
 # Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.cloudflare.com,"{{{US}}}",extended-matching
