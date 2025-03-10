@@ -1,7 +1,7 @@
 #!name=Custom.Apple Service Connect
 #!desc=自訂蘋果服務連接模式 2025-03-10
 #!category=Apple
-#!arguments = Default:"{{{Default}}}",US:"美國",Low:"{{{Low}}}",off:"DIRECT"
+#!arguments = Default:"{{{🍎 Apple}}}",US:"美國",Low:"{{{🚗 低速}}}",off:"DIRECT"
 #!arguments-desc = Default:🍎 Apple\n US: 美國\n Low:🚗 低速\n off:DIRECT
 
 [Rule]
