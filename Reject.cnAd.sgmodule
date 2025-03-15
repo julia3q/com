@@ -9,9 +9,6 @@
 DOMAIN-SUFFIX,speedtest.cn,DIRECT,extended-matching
 DOMAIN-SUFFIX,goatcounter.com,DIRECT,extended-matching
 
-# 通用-去追蹤
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,pre-matching,extended-matching
-
 # > --sukka-reject Rule Start --
 # 感謝 sukka https://ruleset.skk.moe/
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,pre-matching,extended-matching
@@ -22,3 +19,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,pre-ma
 # sukka-rejectIP
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
+# > --reject Rule Start --
+# 通用-去追蹤
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,pre-matching,extended-matching

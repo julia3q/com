@@ -60,6 +60,9 @@ DOMAIN-KEYWORD,umtrack
 DOMAIN-KEYWORD,uploadMobileData
 DOMAIN-KEYWORD,wlmonitor
 DOMAIN-KEYWORD,zjtoolbar
+DOMAIN-KEYWORD,googleadservice
+DOMAIN-KEYWORD,googleadservices
+DOMAIN-KEYWORD,googleadsserving
 DOMAIN,admob.com
 DOMAIN,flurry.com
 DOMAIN,mopub.com
@@ -151,6 +154,7 @@ DOMAIN,adservice.google.nl
 
 # [googleadservices.co.uk]
 DOMAIN,googleadservices.co.uk
+
 
 # [googleadservices.com]
 DOMAIN,googleadservices.com
