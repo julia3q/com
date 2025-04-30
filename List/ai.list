@@ -2,7 +2,7 @@
 DOMAIN,files.oaiusercontent.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-KEYWORD,chatgpt
-# > AI
+# > AI https://ruleset.skk.moe/List/non_ip/ai.conf
 DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,notebooklm.google
 DOMAIN-SUFFIX,deepmind.google
