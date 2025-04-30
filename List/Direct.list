@@ -3,6 +3,9 @@
 # REPO: https://github.com/julia3q/com/List
 # UPDATED: 2024-12-29 15:22
 
+
+DOMAIN-SUFFIX,goatcounter.com
+
 # https://ruleset.skk.moe/List/non_ip/direct.conf
 # https://github.com/blackmatrix7/ios_rule_script
 DOMAIN-SUFFIX,lan

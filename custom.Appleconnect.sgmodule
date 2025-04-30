@@ -1,6 +1,6 @@
 #!name=指定蘋果系統服務連線
 #!desc=Custom.Apple Service Connect 2025-04-30
-#!category=Apple
+#!category=module-Ju
 #!arguments = Default:🍎 Apple,US:"美國",Low:🚗 低速,Off:"DIRECT"
 #!arguments-desc =Default:🍎 Apple\n  US: 美國\n  Low:🚗 低速\n  Off:DIRECT
 

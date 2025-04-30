@@ -1,6 +1,6 @@
-#!name=Reject.cnAD
-#!desc=阻斷廣告·cn  2025.03.10
-#!category=阻斷廣告
+#!name=阻斷廣告·cn 
+#!desc=Reject.cn AD 2025.04.30
+#!category=module-Ju
 #!system=ios
 
 [Rule]
@@ -21,4 +21,4 @@ RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
 # > --reject Rule Start --
 # 通用-去追蹤
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/AD.Block.list,REJECT,pre-matching,extended-matching
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Reject.list,REJECT,pre-matching,extended-matching
