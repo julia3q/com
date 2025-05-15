@@ -1,8 +1,8 @@
 #!name=蘋果系統 連線規則
 #!desc=Apple Rules Connect 2025-05-15
 #!category=module-Ju
-#!arguments = Default:🍎 Apple,US:"美國",Low:🚗 低速,Off:"DIRECT"
-#!arguments-desc =Default:🍎 Apple\nUS: 美國\nLow:🚗 低速\nOff:DIRECT
+#!arguments = 代理:🍎 Apple,CDN-LOW:🚗 低速,不使用代理:"DIRECT"
+#!arguments-desc = 代理:🍎 Apple \n CDN-LOW:🚗 低速\n 不使用代理:DIRECT
 
 [Rule]
 # > -- Apple Rules Connect, Start --
@@ -11,20 +11,20 @@
 DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
 
 # Apple Update Rules
-RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{Off}}}"
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{不使用代理}}}"
 
 # Apple Rules
-#
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.AppleProxy.list,🍎 Apple
+#Ju Custom.AppleProxy
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.AppleProxy.list,{{{代理}}}
 
 #沒有的 CDN 節點
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,{{{Default}}}
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,{{{代理}}}
 #Apple API 域名
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,{{{Default}}}
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,{{{代理}}}
 #Apple 全球 CDN
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{Off}}}"
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{不使用代理}}}"
 #本地化息息相關的規則，比如地圖、天氣、查找、Facetime、Apple Pay ( iCloud 上傳與下載也歸於此規則集
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,"{{{Off}}}"
-RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{Default}}}
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,"{{{不使用代理}}}"
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{代理}}}
 
 # > -- Apple Rules Connect, End --
