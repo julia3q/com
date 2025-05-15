@@ -2,25 +2,27 @@
 # UPDATED: 2025-05-15
 # by module-Ju
 #----------------------------------------
-#! ☁️ iCloud Private Relay
-USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
-DOMAIN,mask-api.icloud.com
-DOMAIN,mask-api.fe.apple-dns.net
 
-# iCloud Private Relay
+# Apple Intelligence
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+
+#! ☁️ iCloud Private Relay
 # https://mask-api.icloud.com/egress-ip-ranges.csv
 # Allow for network traffic audits
-DOMAIN,mask.icloud.com
-DOMAIN,mask.apple-dns.net
 DOMAIN,mask-canary.icloud.com
 DOMAIN,canary.mask.apple-dns.net
-DOMAIN,mask-h2.icloud.com
-DOMAIN,mask-t.apple-dns.net
+#DOMAIN,mask-api.icloud.com
+#DOMAIN,mask-api.fe.apple-dns.net
+#DOMAIN,mask-h2.icloud.com
+#DOMAIN,mask-t.apple-dns.net
+#DOMAIN,mask.icloud.com
+#DOMAIN,mask.apple-dns.net
+USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
 
 #! iMessage 和 Facetime 服务器
 DOMAIN-SUFFIX,ess.apple.com
 
-#! Siri & Spotlight
+#! Siri & Spotlight test
 #! Siri Requests
 #DOMAIN,lookup-api.apple.com
 #DOMAIN,lookup-api.apple.com.edgekey.net
@@ -29,24 +31,16 @@ DOMAIN-SUFFIX,ess.apple.com
 #PROCESS-NAME,LookupViewService
 #PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/#LookupViewService.xpc/Contents/MacOS/LookupViewService
 
-#! ☁️ iCloud
-#DOMAIN,gateway.icloud.com
-#DOMAIN-SUFFIX,icloud-content.com
-#DOMAIN-SUFFIX,icloud.apple.com
-#DOMAIN-SUFFIX,apple-cloudkit.com
-
-#! GeoServices / Country Code
+#! GeoServices / Country Code  test
 #DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com 
 #DOMAIN-SUFFIX,gspe21-ssl.ls.apple.com
 #DOMAIN-SUFFIX,gspe21.ls.apple.com
 #PROCESS-NAME,com.apple.geod
 
-# 地圖
+# Apple Maps  test
 #DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
 #DOMAIN,apple-livephotoskit.com
 #DOMAIN,apple-mapkit.com
 #PROCESS-NAME,com.apple.Maps
 #PROCESS-NAME,trustd
 
-#! Apple URL Shortener
-#DOMAIN-SUFFIX,apple.co
