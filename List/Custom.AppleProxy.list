@@ -3,10 +3,18 @@
 # by module-Ju
 #----------------------------------------
 
+# iOS App Store 下載
+DOMAIN,iosapps.itunes.apple.com
+#USER-AGENT,com.apple.appstored*
+
+# Mac App Store 下載
+DOMAIN,osxapps.itunes.apple.com
+DOMAIN,oscdn.apple.com
+
 # Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 
-#! ☁️ iCloud Private Relay
+#! ☁️ iCloud Private Relay 
 # https://mask-api.icloud.com/egress-ip-ranges.csv
 # Allow for network traffic audits
 DOMAIN,mask-canary.icloud.com
@@ -19,7 +27,7 @@ DOMAIN,canary.mask.apple-dns.net
 #DOMAIN,mask.apple-dns.net
 USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
 
-#! iMessage 和 Facetime 服务器
+#! iMessage 和 Facetime 
 DOMAIN-SUFFIX,ess.apple.com
 
 #! Siri & Spotlight test
