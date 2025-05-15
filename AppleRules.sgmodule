@@ -1,0 +1,38 @@
+#!name=蘋果系統 連線規則
+#!desc=Apple Rules Connect 2025-05-15
+#!category=module-Ju
+#!arguments = Default:🍎 Apple,US:"美國",Low:🚗 低速,Off:"DIRECT"
+#!arguments-desc =Default:🍎 Apple\nUS: 美國\nLow:🚗 低速\nOff:DIRECT
+
+[Rule]
+# > -- Apple Rules Connect, Start --
+
+# 解除 macOS 緩存
+DOMAIN,iadsdk.apple.com,"{{{Default}}}",extended-matching
+DOMAIN,metrics.icloud.com,"{{{Default}}}",extended-matching
+
+# 檢測cn阻斷
+DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
+
+# Apple Intelligence
+DOMAIN-SUFFIX,apple-relay.cloudflare.com,"{{{US}}}",extended-matching
+DOMAIN-SUFFIX,apple-relay.apple.com,"{{{US}}}",extended-matching
+
+
+# Apple Update Rules
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{Off}}}"
+
+# Apple Rules
+# 打開 iCloud Private Relay 吧
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.AppleProxy.list,🍎 Apple
+#沒有的 CDN 節點
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,{{{Default}}}
+#Apple API 域名
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,{{{Default}}}
+#Apple 全球 CDN
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{Off}}}"
+#本地化息息相關的規則，比如地圖、天氣、查找、Facetime、Apple Pay ( iCloud 上傳與下載也歸於此規則集
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,{{{Default}}}
+ttps://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{Default}}}
+
+# > -- Apple Rules Connect, End --
