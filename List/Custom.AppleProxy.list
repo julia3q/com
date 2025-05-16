@@ -14,7 +14,7 @@ DOMAIN,oscdn.apple.com
 # Apple Intelligence
 DOMAIN-SUFFIX,apple-relay.cloudflare.com
 
-#! ☁️ iCloud Private Relay 
+#! ☁️ iCloud Private Relay for no cn cdn
 # https://mask-api.icloud.com/egress-ip-ranges.csv
 # Allow for network traffic audits
 DOMAIN,mask-canary.icloud.com
@@ -25,19 +25,18 @@ DOMAIN,canary.mask.apple-dns.net
 #DOMAIN,mask-t.apple-dns.net
 #DOMAIN,mask.icloud.com
 #DOMAIN,mask.apple-dns.net
-USER-AGENT,Transparent%20network%20proxy%20for%20Apple%20system%20services*
 
-#! iMessage 和 Facetime 
-DOMAIN-SUFFIX,ess.apple.com
+#! iMessage 和 Facetime for api
+#DOMAIN-SUFFIX,ess.apple.com
 
 #! Siri & Spotlight test
 #! Siri Requests
-#DOMAIN,lookup-api.apple.com
-#DOMAIN,lookup-api.apple.com.edgekey.net
+DOMAIN,lookup-api.apple.com
+DOMAIN,lookup-api.apple.com.edgekey.net
+DOMAIN-SUFFIX,smoot.apple.com
 #DOMAIN-SUFFIX,e16991.b.akamaiedge.net
-#DOMAIN-SUFFIX,smoot.apple.com
 #PROCESS-NAME,LookupViewService
-#PROCESS-NAME,/System/Library/PrivateFrameworks/Lookup.framework/Versions/A/XPCServices/#LookupViewService.xpc/Contents/MacOS/LookupViewService
+
 
 #! GeoServices / Country Code  test
 #DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com 

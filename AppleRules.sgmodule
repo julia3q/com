@@ -5,10 +5,7 @@
 #!arguments-desc = 代理:🍎 Apple \n CDN-LOW:🚗 低速\n 不使用代理:DIRECT
 
 [Rule]
-# > -- Apple Rules Connect, Start --
-
-# 檢測cn阻斷
-DOMAIN,tether.edge.apple,REJECT,pre-matching,extended-matching
+# -- Apple Rules Connect, Start --
 
 # Apple Update Rules
 RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{不使用代理}}}"
@@ -27,4 +24,4 @@ RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/Config
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,"{{{不使用代理}}}"
 RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{代理}}}
 
-# > -- Apple Rules Connect, End --
+# -- Apple Rules Connect, End --
