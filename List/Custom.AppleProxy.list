@@ -3,6 +3,9 @@
 # Module-Ju:Apple Rules Connect
 #----------------------------------------
 
+#App Store search
+DOMAIN,amp-api-search-edge.apps.apple.com
+
 # iOS App Store 下載
 DOMAIN,iosapps.itunes.apple.com
 #USER-AGENT,com.apple.appstored*
