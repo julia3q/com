@@ -1,10 +1,11 @@
 #!name=阻斷廣告·cn 
-#!desc=Reject.cn AD 2025.05.16
+#!desc=Reject.cn AD 2025.08.21
 #!category=Module-Ju
 #!system=ios
 
 [Rule]
 # 放行的域 
+DOMAIN-SUFFIX,air-matters.com,Proxy,extended-matching
 DOMAIN-SUFFIX,goatcounter.com,DIRECT,extended-matching
 DOMAIN-KEYWORD,speedtest,DIRECT,extended-matching
 

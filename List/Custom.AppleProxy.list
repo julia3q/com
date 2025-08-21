@@ -3,6 +3,9 @@
 # Module-Ju:Apple Rules Connect
 #----------------------------------------
 
+# 音樂 歌詞
+DOMAIN-SUFFIX,pancake.apple.com
+
 #App Store search
 DOMAIN,amp-api-search-edge.apps.apple.com
 
