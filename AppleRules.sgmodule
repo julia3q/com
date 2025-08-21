@@ -7,8 +7,11 @@
 [Rule]
 # -- Apple Rules Connect, Start --
 
+DOMAIN-SUFFIX,sylvan.apple.com,"{{{不使用代理}}}" // os系統螢幕更新 /System/Library/PrivateFrameworks/TVIdleServices.framework/idleassetsd
+
 # Apple Update Rules
 RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{不使用代理}}}"
+
 
 # Apple Rules
 #Ju Custom.AppleProxy
