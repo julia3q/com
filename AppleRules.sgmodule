@@ -7,14 +7,14 @@
 [Rule]
 # -- Apple Rules Connect, Start --
 
-DOMAIN-SUFFIX,sylvan.apple.com,"{{{不使用代理}}}" // os系統螢幕更新 /System/Library/PrivateFrameworks/TVIdleServices.framework/idleassetsd
-
 # Apple Update Rules
-RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{不使用代理}}}"
 
+DOMAIN-SUFFIX,sylvan.apple.com,"{{{不使用代理}}}"
+
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{代理}}}"
 
 # Apple Rules
-#Ju Custom.AppleProxy
+# ------ Custom.AppleProxy
 RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.AppleProxy.list,{{{代理}}}
 
 #沒有的 CDN 節點
@@ -22,9 +22,10 @@ RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/Config
 #Apple API 域名
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,{{{代理}}}
 #Apple 全球 CDN
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{CDN-LOW}}}"
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{代理}}}"
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{代理}}}
+
 #本地化息息相關的規則，比如地圖、天氣、查找、Facetime、Apple Pay ( iCloud 上傳與下載也歸於此規則集
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,"{{{不使用代理}}}"
-RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{代理}}}
 
 # -- Apple Rules Connect, End --
