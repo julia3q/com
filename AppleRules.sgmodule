@@ -1,5 +1,5 @@
 #!name=蘋果系統 連線規則
-#!desc=Apple Rules Connect 2025-05-15
+#!desc=Apple Rules Connect 2025-08-21
 #!category=Module-Ju
 #!arguments = 代理:🍎 Apple,CDN-LOW:🚗 低速,不使用代理:DIRECT
 #!arguments-desc = 代理:🍎 Apple \n CDN-LOW:🚗 低速\n 不使用代理:DIRECT
