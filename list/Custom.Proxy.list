@@ -1,0 +1,8 @@
+# NAME: custom.Proxy
+# UPDATED: 2026-01-05
+# Module:Rules Connect Proxy
+#----------------------------------------
+#在意天氣
+DOMAIN-SUFFIX,air-matters.com
+#計數器
+DOMAIN-SUFFIX,goatcounter.com

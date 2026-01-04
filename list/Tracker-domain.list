@@ -1,0 +1,107 @@
+# NAME: Tracker.Block 通用-阻斷追蹤 
+# AUTHOR: Julia
+# REPO: https://github.com/julia3q/com/List 
+# UPDATED: 2024-12-29 15:23
+
+#! 通用去追蹤
+DOMAIN-KEYWORD,anylist.c.appier.net
+DOMAIN-KEYWORD,sessions.bugsnag.com
+DOMAIN-KEYWORD,gz-data.com
+DOMAIN-KEYWORD,track
+DOMAIN-KEYWORD,tracking
+DOMAIN-KEYWORD,retracker
+DOMAIN-KEYWORD,gz-data.com
+DOMAIN-KEYWORD,collector
+DOMAIN-KEYWORD,analysis
+DOMAIN-KEYWORD,analysys
+DOMAIN-KEYWORD,analytics
+DOMAIN-KEYWORD,crashlytics
+DOMAIN-KEYWORD,admarvel
+DOMAIN-KEYWORD,admaster
+DOMAIN-KEYWORD,admdfs
+DOMAIN-KEYWORD,adnewnc
+DOMAIN-KEYWORD,adsage
+DOMAIN-KEYWORD,adsame
+DOMAIN-KEYWORD,adsensor
+DOMAIN-KEYWORD,adserver
+DOMAIN-KEYWORD,adservice-DROP
+DOMAIN-KEYWORD,adsmogo
+DOMAIN-KEYWORD,adsrvmedia
+DOMAIN-KEYWORD,adsserving
+DOMAIN-KEYWORD,adsystem
+DOMAIN-KEYWORD,advert
+DOMAIN-KEYWORD,adwords
+DOMAIN-KEYWORD,allyes
+DOMAIN-KEYWORD,app-measurement
+DOMAIN-KEYWORD,applovin
+DOMAIN-KEYWORD,appsflyer
+DOMAIN-KEYWORD,crashlytics-DROP
+DOMAIN-KEYWORD,dnserror
+DOMAIN-KEYWORD,domob
+DOMAIN-KEYWORD,doubleclick
+DOMAIN-KEYWORD,doubleclick-analytics
+DOMAIN-KEYWORD,doublecklick
+DOMAIN-KEYWORD,duomeng
+DOMAIN-KEYWORD,dwtrack
+DOMAIN-KEYWORD,fenxi
+DOMAIN-KEYWORD,guanggao
+DOMAIN-KEYWORD,inmobi
+DOMAIN-KEYWORD,lianmeng
+DOMAIN-KEYWORD,meetrics
+DOMAIN-KEYWORD,mobaders
+DOMAIN-KEYWORD,omgmta
+DOMAIN-KEYWORD,openx
+DOMAIN-KEYWORD,partnerad
+DOMAIN-KEYWORD,securepubads
+DOMAIN-KEYWORD,socdm
+DOMAIN-KEYWORD,supersonicads
+DOMAIN-KEYWORD,taboola
+DOMAIN-KEYWORD,uedas
+DOMAIN-KEYWORD,umtrack
+DOMAIN-KEYWORD,uploadMobileData
+DOMAIN-KEYWORD,wlmonitor
+DOMAIN-KEYWORD,zjtoolbar
+DOMAIN-KEYWORD,ads.google
+DOMAIN-KEYWORD,adservice
+DOMAIN-KEYWORD,googleadservices
+DOMAIN-KEYWORD,googleadsserving
+DOMAIN,admob.com
+DOMAIN,flurry.com
+DOMAIN,mopub.com
+
+
+#以下引入 https://github.com/geekdada/surge-list/tree/master
+
+# [google.com]
+DOMAIN,ampcid.google.com
+DOMAIN,fundingchoices.google.com
+DOMAIN,pagead.l.google.com
+DOMAIN,pagead-googlehosted.l.google.com
+DOMAIN,pagead-tpc.l.google.com
+DOMAIN,partnerad.l.google.com
+DOMAIN,s0-2mdn-net.l.google.com
+DOMAIN,www-googletagmanager.l.google.com
+DOMAIN,video-stats.video.google.com
+
+
+# [googleapis.com]
+DOMAIN,clientmetrics-pa.googleapis.com
+DOMAIN,ad-creatives-public.commondatastorage.googleapis.com
+
+# [googleplex.com]
+DOMAIN,badad.googleplex.com
+
+# [googlesyndication.com]
+DOMAIN,ade.googlesyndication.com
+DOMAIN,buttons.googlesyndication.com
+DOMAIN,pagead2.googlesyndication.com
+DOMAIN,tpc.googlesyndication.com
+DOMAIN,tpcnc.googlesyndication.com
+DOMAIN,video-ad-stats.googlesyndication.com
+
+
+
+
+
+
+

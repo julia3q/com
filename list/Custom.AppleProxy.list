@@ -1,0 +1,59 @@
+# NAME: custom.AppleProxy
+# UPDATED: 2025-08-21
+# Module-Ju:Apple Rules Connect
+#----------------------------------------
+
+# 音樂 歌詞
+DOMAIN-SUFFIX,pancake.apple.com
+
+#App Store search
+DOMAIN,amp-api-search-edge.apps.apple.com
+
+# iOS App Store 下載
+DOMAIN,iosapps.itunes.apple.com
+#USER-AGENT,com.apple.appstored*
+
+# Mac App Store 下載
+DOMAIN,osxapps.itunes.apple.com
+DOMAIN,oscdn.apple.com
+
+# Apple Intelligence
+DOMAIN-SUFFIX,apple-relay.cloudflare.com
+
+#! ☁️ iCloud Private Relay for no cn cdn
+# https://mask-api.icloud.com/egress-ip-ranges.csv
+# Allow for network traffic audits
+DOMAIN,mask-canary.icloud.com
+DOMAIN,canary.mask.apple-dns.net
+#DOMAIN,mask-api.icloud.com
+#DOMAIN,mask-api.fe.apple-dns.net
+#DOMAIN,mask-h2.icloud.com
+#DOMAIN,mask-t.apple-dns.net
+#DOMAIN,mask.icloud.com
+#DOMAIN,mask.apple-dns.net
+
+#! iMessage 和 Facetime for api
+#DOMAIN-SUFFIX,ess.apple.com
+
+#! Siri & Spotlight test
+#! Siri Requests
+DOMAIN,lookup-api.apple.com
+DOMAIN,lookup-api.apple.com.edgekey.net
+DOMAIN-SUFFIX,smoot.apple.com
+#DOMAIN-SUFFIX,e16991.b.akamaiedge.net
+#PROCESS-NAME,LookupViewService
+
+
+#! GeoServices / Country Code  test
+#DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com 
+#DOMAIN-SUFFIX,gspe21-ssl.ls.apple.com
+#DOMAIN-SUFFIX,gspe21.ls.apple.com
+#PROCESS-NAME,com.apple.geod
+
+# Apple Maps  test
+#DOMAIN-SUFFIX,gspe35-ssl.ls.apple.com
+#DOMAIN,apple-livephotoskit.com
+#DOMAIN,apple-mapkit.com
+#PROCESS-NAME,com.apple.Maps
+#PROCESS-NAME,trustd
+

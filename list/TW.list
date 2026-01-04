@@ -1,0 +1,31 @@
+# NAME: only TW
+# AUTHOR: Julia
+# REPO: https://github.com/julia3q/com/List
+# UPDATED: 2024-12-29 15:22
+
+DOMAIN-SUFFIX,tw
+DOMAIN-SUFFIX,com.tw
+DOMAIN-SUFFIX,gov.tw
+DOMAIN-SUFFIX,net.tw
+DOMAIN-SUFFIX,emome.net
+
+DOMAIN-SUFFIX,91app.com
+DOMAIN-SUFFIX,kaibeautyshop.com
+DOMAIN-SUFFIX,everrich.com
+
+DOMAIN-SUFFIX,dcard.tw
+DOMAIN-SUFFIX,mobile01.com
+DOMAIN-SUFFIX,ptt.cc
+
+DOMAIN-SUFFIX,myvideo.net.tw
+
+DOMAIN-SUFFIX,guce.oath.com //yahoo
+
+DOMAIN-KEYWORD,yahoo
+DOMAIN-KEYWORD,vocus
+
+
+
+
+
+

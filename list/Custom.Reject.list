@@ -1,0 +1,16 @@
+# NAME: custom.Reject.list
+# UPDATED: 2025-08-21
+# Module:Reject.cnAD
+#----------------------------------------
+
+DOMAIN-SUFFIX,safebrowsing.apple
+DOMAIN-KEYWORD,app-site.association
+DOMAIN-KEYWORD,safebrowsing
+
+#開源的錯誤追蹤平台，用來監控應用程式中的例外錯誤、性能問題等
+DOMAIN-SUFFIX,sentry.io
+
+#檢測cn macOS/iOS Continuity 
+DOMAIN,tether.edge.apple
+
+DOMAIN,ads.superad.cc
