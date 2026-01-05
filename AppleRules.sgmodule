@@ -2,28 +2,25 @@
 #!desc=Apple Rules Connect 2026-01-05
 #!category=Module
 #!arguments = 節點:🍎 Apple,直連:DIRECT,手動選擇:🍎 AppleUpdate
-#!arguments-desc = 節點:🍎 Apple \n 直連:DIRECT \n 手動選擇:🍎 AppleUpdate
+#!arguments-desc = 節點:🍎 Apple \n直連:DIRECT \n手動選擇:🍎 AppleUpdate
 
 [Rule]
-# -- Apple Rules Connect, Start --
-
 # Apple Update Rules
-
-DOMAIN-SUFFIX,sylvan.apple.com,"{{{直連}}}"
-
 RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,"{{{手動選擇}}}"
 
-# Apple Rules
-# ------ Custom.AppleProxy
+# Custom Apple Rules
 RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/list/Custom.AppleProxy.list,{{{節點}}}
-DOMAIN-SUFFIX,icloud-content.com,"{{{節點}}}"
+
 #沒有的 CDN 節點
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,{{{節點}}}
 #Apple API 域名
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,{{{節點}}}
 #Apple 全球 CDN
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,"{{{節點}}}"
+
+RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{節點}}}
+
 #本地化息息相關的規則，比如地圖、天氣、查找、Facetime、Apple Pay ( iCloud 上傳與下載也歸於此規則集
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,"{{{直連}}}"
-RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/api-ip.list,{{{節點}}}
-# -- Apple Rules Connect, End --
+
+
