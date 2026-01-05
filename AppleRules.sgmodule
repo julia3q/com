@@ -1,6 +1,6 @@
-#!name=蘋果系統 連線規則
-#!desc=Apple Rules Connect 2025-08-21
-#!category=Module-Ju
+#!name=🍎 Apple 連線模式
+#!desc=Apple Rules Connect 2026-01-05
+#!category=Module
 #!arguments = 節點:🍎 Apple,直連:DIRECT,手動選擇:🍎 AppleUpdate
 #!arguments-desc = 節點:🍎 Apple \n 直連:DIRECT \n 手動選擇:🍎 AppleUpdate
 

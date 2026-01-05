@@ -1,8 +1,14 @@
-# NAME: custom.Proxy
+# NAME:⚙️ Custom.Proxy
+# REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/list/Custom.Proxy.list
 # UPDATED: 2026-01-05
 # Module:Rules Connect Proxy
 #----------------------------------------
 #在意天氣
-DOMAIN-SUFFIX,air-matters.com
+DOMAIN-SUFFIX,air-matters.com,extended-matching
 #計數器
-DOMAIN-SUFFIX,goatcounter.com
+DOMAIN-SUFFIX,goatcounter.com,extended-matching
+#食譜
+DOMAIN-SUFFIX,cookpad.com,extended-matching
+#個人網站
+DOMAIN-SUFFIX,ivonblog.com,extended-matching
+DOMAIN-SUFFIX,awstrack.me,extended-matching
