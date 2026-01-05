@@ -5,9 +5,9 @@
 
 [Rule]
 # --Reject.cnAD Rule Start --
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.Reject.list,REJECT,pre-matching,extended-matching
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/list/Custom.Reject.list,REJECT,pre-matching,extended-matching
 # 通用-去追蹤
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Tracker-domain.list,REJECT,pre-matching,extended-matching
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/list/Tracker-domain.list,REJECT,pre-matching,extended-matching
 
 # -- sukka-reject Rule Start --
 # 感謝 sukka https://ruleset.skk.moe/

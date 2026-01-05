@@ -15,7 +15,7 @@ RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/
 
 # Apple Rules
 # ------ Custom.AppleProxy
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/main/List/Custom.AppleProxy.list,{{{節點}}}
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/list/Custom.AppleProxy.list,{{{節點}}}
 DOMAIN-SUFFIX,icloud-content.com,"{{{節點}}}"
 #沒有的 CDN 節點
 RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,{{{節點}}}
