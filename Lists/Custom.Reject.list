@@ -1,0 +1,21 @@
+# NAME: ⚙️ Custom.Reject
+# REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Reject.list
+# UPDATED: 2026-07-13
+# Module:Reject.cnAD
+
+# === 🍎 蘋果特殊請求 (Apple Edge/Continuity) ===
+DOMAIN-SUFFIX,safebrowsing.apple
+DOMAIN-KEYWORD,safebrowsing
+DOMAIN-KEYWORD,app-site.association
+DOMAIN,tether.edge.apple
+
+# === 🚫 錯誤追蹤與廣告 (Trackers & Ads) ===
+DOMAIN-SUFFIX,sentry.io
+DOMAIN-SUFFIX,ads.superad.cc
+
+# === 🔞 成人過濾 (NSFW) ===
+DOMAIN-SUFFIX,avple.tv
+DOMAIN-SUFFIX,javrate.com
+DOMAIN-SUFFIX,missav.ws
+DOMAIN-KEYWORD,jable
+DOMAIN-KEYWORD,missav

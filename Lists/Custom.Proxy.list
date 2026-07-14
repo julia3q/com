@@ -1,0 +1,48 @@
+# NAME: ⚙️ Custom.Proxy
+# REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Proxy.list
+# UPDATED: 2026-07-13
+# Module:Rules Connect Proxy
+
+# === 🤖 AI 與科技服務 ===
+DOMAIN-SUFFIX,grok.com,extended-matching
+
+# === 🛠️ 開發與伺服器 (Dev & Server) ===
+DOMAIN-SUFFIX,vultr.com,extended-matching
+DOMAIN-SUFFIX,docker.io,extended-matching
+DOMAIN-SUFFIX,brew.sh,extended-matching
+DOMAIN-SUFFIX,dns.google
+DOMAIN-SUFFIX,doh.dns.apple.com
+
+# === 🧰 軟體與工具 (Tools) ===
+DOMAIN-SUFFIX,nssurge.com,extended-matching
+DOMAIN-SUFFIX,air-matters.com,extended-matching
+DOMAIN-SUFFIX,mole.fit,extended-matching
+
+# === 💻 開發與程式碼 (Dev & GitHub) ===
+DOMAIN-KEYWORD,github,extended-matching
+DOMAIN-SUFFIX,zed.dev,extended-matching
+DOMAIN-SUFFIX,pypi.org,extended-matching
+DOMAIN-SUFFIX,pythonhosted.org,extended-matching
+DOMAIN,registry.npmjs.org
+
+
+# === 🍿 影音與娛樂 (Media & Entertainment) ===
+DOMAIN-SUFFIX,artlist.io,extended-matching
+DOMAIN-SUFFIX,opensubtitles.com,extended-matching
+DOMAIN-SUFFIX,theintrodb.org,extended-matching
+DOMAIN-SUFFIX,introdb.app,extended-matching
+DOMAIN-SUFFIX,trakt.tv,extended-matching
+
+# === 📰 社交、部落格與論壇 ===
+DOMAIN-SUFFIX,thenewslens.com,extended-matching
+DOMAIN-SUFFIX,ivonblog.com,extended-matching
+DOMAIN-SUFFIX,cookpad.com,extended-matching
+DOMAIN-SUFFIX,v2ex.co,extended-matching
+
+# === 🚫 追蹤與統計 (Analytics) ===
+# 註解：如果不想被本地阻擋而導致網頁無法載入，選擇 Proxy 出去
+DOMAIN-SUFFIX,awstrack.me,extended-matching
+#DOMAIN-SUFFIX,goatcounter.com,extended-matching
+DOMAIN-SUFFIX,mushroomtrack.com,extended-matching
+
+# === 🌍 其他海外服務 ===

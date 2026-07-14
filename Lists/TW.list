@@ -1,0 +1,29 @@
+# NAME: only TW
+# REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/TW.list
+# UPDATED: 2026-07-13
+
+# === 基礎與政府 ===
+DOMAIN-SUFFIX,tw
+DOMAIN-SUFFIX,com.tw
+DOMAIN-SUFFIX,gov.tw
+DOMAIN-SUFFIX,net.tw
+DOMAIN-SUFFIX,edu.tw
+DOMAIN-SUFFIX,tyc.edu.tw
+
+# === 電信與ISP ===
+DOMAIN-SUFFIX,emome.net
+DOMAIN-SUFFIX,hinet.net
+
+# === 論壇與社交 ===
+DOMAIN-SUFFIX,dcard.tw
+DOMAIN-SUFFIX,mobile01.com
+DOMAIN-SUFFIX,ptt.cc
+
+# === 娛樂與生活 ===
+DOMAIN-SUFFIX,myvideo.net.tw
+DOMAIN-SUFFIX,everrich.com
+
+# === 搜尋與其他 ===
+DOMAIN-SUFFIX,guce.oath.com
+DOMAIN-KEYWORD,yahoo
+DOMAIN-KEYWORD,vocus
