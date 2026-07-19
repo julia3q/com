@@ -1,0 +1,6 @@
+#!name=AdBlock-tw
+#!desc= 專為臺灣環境設計的廣告阻擋規則 🇹🇼
+
+[Rule]
+https://filter.futa.gg/Surge/filters.txt
+https://github.com/jkgtw/Surge/blob/master/Modules/LINE-ADs.sgmodule

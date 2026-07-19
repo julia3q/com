@@ -4,8 +4,8 @@
 
 ## 目錄結構 (Directory Structure)
 
-- **/Lists**: 包含各種自訂的 `.list` 分流規則（如 Proxy、Reject、台灣專屬等）。
-- **/Modules**: 包含自訂的 Surge 模組 (`.sgmodule`)，如去廣告、銀行白名單等。
+- **/Lists**: 包含各種自訂的 `.list` 分流規則（如 Proxy、ProxyLocal、Reject、台灣專屬等）。
+- **根目錄 `*.sgmodule`**: 自訂的 Surge 模組，如去廣告、銀行白名單、臺灣去廣告等。
 
 ## 遠端引用 (Remote URLs)
 
@@ -14,6 +14,8 @@
 ### 規則清單 (Rule-Set)
 * **Custom Proxy (自訂代理 & 開發者工具)**
   `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Proxy.list`
+* **Custom ProxyLocal (最近節點 / CDN)**
+  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.ProxyLocal.list`
 * **Custom Reject (自訂阻擋/去廣告)**
   `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Reject.list`
 * **TW (台灣專屬規則)**
@@ -24,12 +26,12 @@
   `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.AppleProxy.list`
 
 ### 模組 (Modules)
-* **Reject.cnAd** 
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Modules/Reject.cnAd.sgmodule`
-* **Bank Bypass (銀行網銀繞過代理)** 
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Modules/Bank_Bypass.sgmodule`
+* **Bank Bypass (銀行網銀繞過代理)**
+  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Bank_Bypass.sgmodule`
 * **AdBlock (通用去廣告)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Modules/AdBlock.sgmodule`
+  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/AdBlock.sgmodule`
+* **AdBlock-tw (臺灣環境去廣告)**
+  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/AdBlock-tw.sgmodule`
 
 ## 維護方式
-本專案僅包含可公開的清單 (`Lists`) 與模組 (`Modules`)。
+本專案僅包含可公開的清單 (`Lists/`) 與根目錄模組 (`*.sgmodule`)。

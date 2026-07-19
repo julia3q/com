@@ -1,2 +1,8 @@
 .agy/
 .DS_Store
+
+# 機密：真實訂閱 URL（只存本地，絕不上 GitHub）
+secrets.env
+
+# 正本（含真實 CA / 策略層），只存本地、絕不上 GitHub
+_private/
