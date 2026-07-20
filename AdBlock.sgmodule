@@ -4,7 +4,7 @@
 
 [Rule]
 # === 1. My_Reject.list ===
-#RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom_Reject.list,REJECT,pre-matching
+#RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom_Reject.list,REJECT,pre-matching
 
 # === 2. 追蹤防護 ===
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Tracker-domain.list,REJECT,pre-matching
+RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Tracker-domain.list,REJECT,pre-matching

@@ -5,7 +5,7 @@
 [Rule]
 # === 1. 個人自訂 Apple 代理 ===
 # 走代理的 Apple 網域（正本見 Lists/Custom.AppleProxy.list）＋ Apple Intelligence
-RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.AppleProxy.list,Proxy,extended-matching
+RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.AppleProxy.list,Proxy,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Proxy,extended-matching
 
 # === 2. 極大流量：保持直連（預設停用，需要時自行開啟）===

@@ -13,25 +13,25 @@
 
 ### 規則清單 (Rule-Set)
 * **Custom Proxy (自訂代理 & 開發者工具)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Proxy.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.Proxy.list`
 * **Custom ProxyLocal (最近節點 / CDN)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.ProxyLocal.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.ProxyLocal.list`
 * **Custom Reject (自訂阻擋/去廣告)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Reject.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.Reject.list`
 * **TW (台灣專屬規則)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/TW.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/TW.list`
 * **Tracker Block (追蹤器阻擋)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Tracker-domain.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Tracker-domain.list`
 * **Apple Proxy (Apple 服務分流與 AI 解鎖)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.AppleProxy.list`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.AppleProxy.list`
 
 ### 模組 (Modules)
 * **Bank Bypass (銀行網銀繞過代理)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Bank_Bypass.sgmodule`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Bank_Bypass.sgmodule`
 * **AdBlock (通用去廣告)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/AdBlock.sgmodule`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/AdBlock.sgmodule`
 * **AdBlock-tw (臺灣環境去廣告)**
-  `https://raw.githubusercontent.com/julia3q/com/refs/heads/main/AdBlock-tw.sgmodule`
+  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/AdBlock-tw.sgmodule`
 
 ## 維護方式
 本專案僅包含可公開的清單 (`Lists/`) 與根目錄模組 (`*.sgmodule`)。
