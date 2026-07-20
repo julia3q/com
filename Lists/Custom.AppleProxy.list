@@ -5,7 +5,7 @@
 #----------------------------------------
 
 #! ☁️ iCloud
-DOMAIN-SUFFIX,icloud-content.com
+# DOMAIN-SUFFIX,icloud-content.com
 
 # search applestore
 DOMAIN-SUFFIX,amp-api-edge.apps.apple.com
@@ -31,4 +31,3 @@ DOMAIN,canary.mask.apple-dns.net
 
 #! iMessage 和 Facetime for api
 #DOMAIN-SUFFIX,ess.apple.com
-

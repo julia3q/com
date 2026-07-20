@@ -1,0 +1,24 @@
+#!name=AppleRouting
+#!desc=Apple 服務分流（針對非國區 Apple ID 優化）：Apple Music／帳號 API 走 Proxy 解鎖；系統更新與 App Store CDN 保持 DIRECT 省流量；天氣／地圖等一般服務 DIRECT。需要 Proxy 出口，建議排序在 AdBlock 之後。UPDATED: 2026-07-20
+#!category=Apple
+
+[Rule]
+# === 1. 個人自訂 Apple 代理 ===
+# 走代理的 Apple 網域（正本見 Lists/Custom.AppleProxy.list）＋ Apple Intelligence
+RULE-SET,https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.AppleProxy.list,Proxy,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Proxy,extended-matching
+
+# === 2. 極大流量：保持直連（預設停用，需要時自行開啟）===
+# 想改走向就自行複製規則、自行決定 policy。
+# 系統更新
+# RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,DIRECT
+# App Store 下載 CDN
+# RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,DIRECT
+
+# === 3. 解鎖服務：走代理 ===
+# Apple Music／帳號 API、非中國 CDN
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,Proxy,extended-matching
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,Proxy,extended-matching
+
+# === 4. 一般 Apple 服務：直連（天氣／地圖等）===
+RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,DIRECT
