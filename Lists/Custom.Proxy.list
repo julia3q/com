@@ -4,7 +4,7 @@
 # Module:Rules Connect Proxy
 
 # === 🤖 AI 與科技服務 ===
-DOMAIN-SUFFIX,grok.com,extended-matching
+
 
 # === 🛠️ 開發與伺服器 (Dev & Server) ===
 DOMAIN-SUFFIX,vultr.com,extended-matching

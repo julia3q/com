@@ -2,8 +2,6 @@
 # REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.ProxyLocal.list
 # UPDATED: 2026-07-19
 # Module:Rules Connect Proxy-local (最近節點 / CDN)
-# 用途：需走「最近節點（香港）」的網域，多為 CDN、對延遲敏感的服務。
-#       Mac / Jh-work 對到 Proxy-local；生活機對到 Proxy（url-test 內含香港節點）。
 
 # === 📥 收割待分類 (Inbox) ===
 

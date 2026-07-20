@@ -1,7 +1,10 @@
 # NAME: ⚙️ Custom.Reject
 # REPO: https://raw.githubusercontent.com/julia3q/com/refs/heads/main/Lists/Custom.Reject.list
-# UPDATED: 2026-07-13
+# UPDATED: 2026-07-20
 # Module:Reject.cnAD
+
+# === 阻斷bilibili stun*.chat ===
+DOMAIN-WILDCARD,stun*.chat.bilibili.com,REJECT,extended-matching
 
 # === 🍎 蘋果特殊請求 (Apple Edge/Continuity) ===
 DOMAIN-SUFFIX,safebrowsing.apple
