@@ -1,6 +1,6 @@
 #!name=AdBlock-tw
-#!desc=臺灣環境去廣告（本地聚合，需啟用 MITM）。由 merge_adblock.py 生成，勿手改；來源見 adblock_sources.txt。
-#!category=Tweaks
+#!desc=臺灣環境去廣告（本地聚合，需啟用 MITM）。由 merge_adblock.py 生成，勿手改；來源見 adblock_sources.txt。UPDATED: 2026-07-20
+#!category=AdBlock
 
 [Rule]
 # === 白名單（DIRECT，須置頂）===
