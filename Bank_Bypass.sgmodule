@@ -1,9 +1,10 @@
 #!name=金融銀行應用兼容模組
-#!desc=針對中國主流銀行、金融 App (含平安數字口袋、中行等) 進行底層繞過。解決閃退、偵測代理與網路連接失敗問題。
+#!desc=針對中國主流銀行、金融 App (含平安數字口袋、中行等) 進行底層繞過。解決閃退、偵測代理與網路連接失敗問題。UPDATED: 2026-07-20
+#!category=Tweaks
 
 
 [MITM]
 tcp-connection = true
 h2 = true
 # 強行排除銀行域名的 MITM 解密，防止金融安全偵測
-hostname = %APPEND% -*.facebook.com, -*.instagram.com, -*.snssdk.com, -*.pstatp.com, -*.pingan.com.cn, -*.pingan.com, -*.pahic.com.cn, -*.95511.com.cn, -*.pab.com.cn, -*.pabank.com.cn, -*.boc.cn, -*.bankofchina.com, -*.icbc.com.cn, -*.ccb.com, -*.abchina.com, -*.psbc.com
+hostname = %APPEND% -*.facebook.com, -*.instagram.com, -*.snssdk.com, -*.pstatp.com, -*.pingan.com.cn, -*.pingan.com, -*.pahic.com.cn, -*.95511.com.cn, -*.pab.com.cn, -*.pabank.com.cn, -*.boc.cn, -*.bankofchina.com, -*.icbc.com.cn, -*.ccb.com, -*.abchina.com, -*.psbc.com, -*.orangebank.com.cn, -*.sdb.com.cn, -*.cmbchina.com, -*.10099.com.cn
