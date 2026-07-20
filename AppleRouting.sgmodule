@@ -4,9 +4,28 @@
 
 [Rule]
 # === 1. 個人自訂 Apple 代理 ===
-# 走代理的 Apple 網域（正本見 Lists/Custom.AppleProxy.list）＋ Apple Intelligence
-RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.AppleProxy.list,Proxy,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Proxy,extended-matching
+# search applestore
+DOMAIN-SUFFIX,amp-api-edge.apps.apple.com,Proxy
+
+# 音樂 歌詞
+DOMAIN-SUFFIX,pancake.apple.com,Proxy
+
+# iCloud Private Relay 已失效
+# https://mask-api.icloud.com/egress-ip-ranges.csv
+# Allow for network traffic audits
+DOMAIN,mask-canary.icloud.com,Proxy
+DOMAIN,canary.mask.apple-dns.net,Proxy
+#DOMAIN,mask-api.icloud.com,Proxy
+#DOMAIN,mask-api.fe.apple-dns.net,Proxy
+#DOMAIN,mask-h2.icloud.com,Proxy
+#DOMAIN,mask-t.apple-dns.net,Proxy
+#DOMAIN,mask.icloud.com,Proxy
+#DOMAIN,mask.apple-dns.net,Proxy
+
+#! iMessage 和 Facetime for api
+#DOMAIN-SUFFIX,ess.apple.com,Proxy
+
 
 # === 2. 極大流量：保持直連（預設停用，需要時自行開啟）===
 # 想改走向就自行複製規則、自行決定 policy。

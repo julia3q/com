@@ -2,6 +2,10 @@
 # REPO: https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/TW.list
 # UPDATED: 2026-07-13
 
+# === 📥 收割待分類 (Inbox) ===
+DOMAIN-SUFFIX,notebooklm.google,extended-matching
+DOMAIN-SUFFIX,notebooklm-pa.googleapis.com,extended-matching
+
 # === 基礎與政府 ===
 DOMAIN-SUFFIX,tw
 DOMAIN-SUFFIX,com.tw
