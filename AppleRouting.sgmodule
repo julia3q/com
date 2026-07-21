@@ -1,43 +1,111 @@
 #!name=AppleRouting
-#!desc=Apple 服務分流（針對非國區 Apple ID 優化）：Apple Music／帳號 API 走 Proxy 解鎖；系統更新與 App Store CDN 保持 DIRECT 省流量；天氣／地圖等一般服務 DIRECT。需要 Proxy 出口，建議排序在 AdBlock 之後。UPDATED: 2026-07-20
+#!desc=Apple 服務分流（針對非國區 Apple ID 優化）：Apple Music／帳號 API 走 Proxy 解鎖；系統更新與 App Store CDN 保持 DIRECT 省流量；天氣／地圖等一般服務 DIRECT。需要 Proxy 出口，建議排序在 AdBlock 之後。 由 merge_routing.py 生成，勿手改（正本 _private/AppleRouting.src.sgmodule）。UPDATED: 2026-07-21
 #!category=Apple
 
 [Rule]
 # === 1. 個人自訂 Apple 代理 ===
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_intelligence.conf,Proxy,extended-matching
-# search applestore
-DOMAIN-SUFFIX,amp-api-edge.apps.apple.com,Proxy
+DOMAIN,apple-relay.apple.com,Proxy,extended-matching
+DOMAIN,gspe1-ssl.ls.apple.com,Proxy,extended-matching
+DOMAIN,apple-relay.cloudflare.com,Proxy,extended-matching
+DOMAIN,cp4.cloudflare.com,Proxy,extended-matching
+DOMAIN,apple-relay.fastly-edge.com,Proxy,extended-matching
 
-# 音樂 歌詞
+# === 2. Apple 代理（手寫）===
+DOMAIN-SUFFIX,amp-api-edge.apps.apple.com,Proxy
+DOMAIN-SUFFIX,ocsp.apple.com,Proxy,extended-matching
 DOMAIN-SUFFIX,pancake.apple.com,Proxy
 
-# iCloud Private Relay 已失效
-# https://mask-api.icloud.com/egress-ip-ranges.csv
-# Allow for network traffic audits
-DOMAIN,mask-canary.icloud.com,Proxy
-DOMAIN,canary.mask.apple-dns.net,Proxy
-#DOMAIN,mask-api.icloud.com,Proxy
-#DOMAIN,mask-api.fe.apple-dns.net,Proxy
-#DOMAIN,mask-h2.icloud.com,Proxy
-#DOMAIN,mask-t.apple-dns.net,Proxy
-#DOMAIN,mask.icloud.com,Proxy
-#DOMAIN,mask.apple-dns.net,Proxy
+# === 3. 極大流量：系統更新／App Store CDN 直連省流量 ===
+DOMAIN-SUFFIX,appldnld.g.aaplimg.com,DIRECT
+DOMAIN-SUFFIX,mesu.g.aaplimg.com,DIRECT
+DOMAIN-SUFFIX,ocsp.g.aaplimg.com,DIRECT
+DOMAIN-SUFFIX,apple.com.w.alikunlun.com,DIRECT
+DOMAIN,aod.itunes.apple.com,DIRECT
+DOMAIN,apptrailers.itunes.apple.com,DIRECT
+DOMAIN,downloaddispatch.itunes.apple.com,DIRECT
+DOMAIN,iosapps.itunes.apple.com,DIRECT
+DOMAIN,mvod.itunes.apple.com,DIRECT
+DOMAIN,ns.itunes.apple.com,DIRECT
+DOMAIN,osxapps.itunes.apple.com,DIRECT
+DOMAIN,streamingaudio.itunes.apple.com,DIRECT
+DOMAIN,app-site-association.cdn-apple.com,DIRECT
+DOMAIN,updates.cdn-apple.com,DIRECT
+DOMAIN,updates-http.cdn-apple.com,DIRECT
+DOMAIN-SUFFIX,apple.com.w.cdngslb.com,DIRECT
+DOMAIN-SUFFIX,iosdomain.qtlcdn.com.cdnmg.com,DIRECT
+DOMAIN-SUFFIX,apple.com.download.ks-cdn.com,DIRECT
+DOMAIN,k128.gslb.gslb.ksyuncdn.com,DIRECT
+DOMAIN,k128-inapp.gslb.ksyuncdn.com,DIRECT
+DOMAIN,k128-iosapps-all.gslb.ksyuncdn.com,DIRECT
+DOMAIN,k128-mzstatic.gslb.ksyuncdn.com,DIRECT
+DOMAIN,k128-updates.gslb.ksyuncdn.com,DIRECT
+DOMAIN-SUFFIX,mzstatic.com,DIRECT
+DOMAIN-SUFFIX,aapl-edge0.qtlcdn.com,DIRECT
+DOMAIN-SUFFIX,iosdomain.qtlcdn.com,DIRECT
+DOMAIN-SUFFIX,apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,ess-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,gc-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,idms-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,ls-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,origin-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,apple.com.m.alikunlun.net,DIRECT
+DOMAIN-SUFFIX,apple.map.fastly.net,DIRECT
 
-#! iMessage 和 Facetime for api
-#DOMAIN-SUFFIX,ess.apple.com,Proxy
+# === 4. 解鎖服務：走代理（Apple Music／帳號 API、非中國 CDN）===
+DOMAIN-SUFFIX,safebrowsing.apple,Proxy,extended-matching
+DOMAIN-SUFFIX,apple.co,Proxy,extended-matching
+DOMAIN-SUFFIX,aaplimg.com,Proxy,extended-matching
+DOMAIN,cdn.apple-cloudkit.com,Proxy,extended-matching
+DOMAIN-SUFFIX,apple-mapkit.com,Proxy,extended-matching
+DOMAIN-SUFFIX,appleid.apple.com,Proxy,extended-matching
+DOMAIN,apps.apple.com,Proxy,extended-matching
+DOMAIN,api.apps.apple.com,Proxy,extended-matching
+DOMAIN,api-edge.apps.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,blobstore.apple.com,Proxy,extended-matching
+DOMAIN,configuration.apple.com,Proxy,extended-matching
+DOMAIN,developer.apple.com,Proxy,extended-matching
+DOMAIN,docs-assets.developer.apple.com,Proxy,extended-matching
+DOMAIN,devimages-cdn.apple.com,Proxy,extended-matching
+DOMAIN,devstreaming-cdn.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,gc.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,gsa.apple.com,Proxy,extended-matching
+DOMAIN,guzzoni.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,itunes.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,music.apple.com,Proxy,extended-matching
+DOMAIN,news-assets.apple.com,Proxy,extended-matching
+DOMAIN,news-client.apple.com,Proxy,extended-matching
+DOMAIN,news-edge.apple.com,Proxy,extended-matching
+DOMAIN,news-events.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,gateway.push.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,gateway.sandbox.push.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,sonos-music.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,swquery.apple.com,Proxy,extended-matching
+DOMAIN,testflight.apple.com,Proxy,extended-matching
+DOMAIN-SUFFIX,tv.apple.com,Proxy,extended-matching
+DOMAIN,weather-analytics-events.apple.com,Proxy,extended-matching
+DOMAIN,tv.applemusic.com,Proxy,extended-matching
+DOMAIN-SUFFIX,cdn-apple.com,Proxy,extended-matching
+DOMAIN,apple.comscoreresearch.com,Proxy,extended-matching
+DOMAIN,cvws.icloud-content.com,Proxy,extended-matching
+DOMAIN,mask.icloud.com,Proxy,extended-matching
+DOMAIN,mask-api.icloud.com,Proxy,extended-matching
+DOMAIN,mask-h2.icloud.com,Proxy,extended-matching
+DOMAIN-SUFFIX,setup.icloud.com,Proxy,extended-matching
+DOMAIN-SUFFIX,itunes.com,Proxy,extended-matching
+DOMAIN-SUFFIX,edge-itunes-apple.com.akadns.net,Proxy,extended-matching
+DOMAIN-SUFFIX,itunes-apple.com.akadns.net,Proxy,extended-matching
+DOMAIN-SUFFIX,apple-dns.net,Proxy,extended-matching
+DOMAIN-SUFFIX,apple.news,Proxy,extended-matching
 
-
-# === 2. 極大流量：保持直連（預設停用，需要時自行開啟）===
-# 想改走向就自行複製規則、自行決定 policy。
-# 系統更新
-# RULE-SET,https://raw.githubusercontent.com/Elysian-Realme/FuGfConfig/refs/heads/main/ConfigFile/Surge/Apple/update-domain.list,DIRECT
-# App Store 下載 CDN
-# RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/cdn-domain.list,DIRECT
-
-# === 3. 解鎖服務：走代理 ===
-# Apple Music／帳號 API、非中國 CDN
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/api-domain.list,Proxy,extended-matching
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/no-cn-cdn-domain.list,Proxy,extended-matching
-
-# === 4. 一般 Apple 服務：直連（天氣／地圖等）===
-RULE-SET,https://github.com/Elysian-Realme/FuGfConfig/raw/refs/heads/main/ConfigFile/Surge/Apple/domain.list,DIRECT
+# === 5. 一般 Apple 服務：直連（天氣／地圖等）===
+DOMAIN,api.smoot.apple.cn,DIRECT
+DOMAIN-SUFFIX,apple.com.cn,DIRECT
+DOMAIN-SUFFIX,icloud.com.cn,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN-SUFFIX,apple-cloudkit.com,DIRECT
+DOMAIN-SUFFIX,icloud.com,DIRECT
+DOMAIN-SUFFIX,icloud-content.com,DIRECT
+DOMAIN-SUFFIX,me.com,DIRECT
+DOMAIN-SUFFIX,lb-apple.com.akadns.net,DIRECT
+DOMAIN-KEYWORD,push-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,ls.apple.com.edgesuite.net,DIRECT
