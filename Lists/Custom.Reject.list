@@ -22,3 +22,12 @@ DOMAIN-SUFFIX,javrate.com
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-KEYWORD,jable
 DOMAIN-KEYWORD,missav
+
+# === 🔍 Google 廣告 CDN（從 Tracker-domain 保留：上游 Sukka/BM7 未擋的 7 條）===
+DOMAIN-SUFFIX,sessions.bugsnag.com
+DOMAIN-SUFFIX,ampcid.google.com
+DOMAIN-SUFFIX,fundingchoices.google.com
+DOMAIN-SUFFIX,pagead-tpc.l.google.com
+DOMAIN-SUFFIX,s0-2mdn-net.l.google.com
+DOMAIN-SUFFIX,www-googletagmanager.l.google.com
+DOMAIN-SUFFIX,badad.googleplex.com

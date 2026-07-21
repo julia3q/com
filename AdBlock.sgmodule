@@ -1,10 +1,19 @@
 #!name=AdBlock
-#!desc=個人客製廣告／追蹤攔截（REJECT）：Custom Reject 清單 ＋ Tracker 追蹤防護。UPDATED: 2026-07-20
+#!desc=個人廣告／追蹤攔截（收攏一份，網域/IP 版、免 MITM）：自訂清單 ＋ Sukka 高效域名集 ＋ BM7 深度攔截 ＋ Sukka 行為/IP。UPDATED: 2026-07-21
 #!category=AdBlock
 
 [Rule]
-# === 1. My_Reject.list ===
-RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom_Reject.list,REJECT,pre-matching
+# === 1. 個人自訂（最優先；要放行誤殺就在這上面加 DOMAIN,xxx,DIRECT）===
+RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Custom.Reject.list,REJECT,pre-matching
 
-# === 2. 追蹤防護 ===
-RULE-SET,https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Lists/Tracker-domain.list,REJECT,pre-matching
+# === 2. Sukka 高效底座（11 萬域名，DOMAIN-SET 秒級省電）===
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT,pre-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT,pre-matching
+
+# === 3. 深度攔截：BlackMatrix7 廣告（CN App 開屏/彈窗）===
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Advertising/Advertising.list,REJECT,pre-matching
+
+# === 4. 行為/IP 攔截：Sukka ===
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,pre-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,pre-matching
+RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP,no-resolve
