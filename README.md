@@ -28,8 +28,6 @@
   `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/Bank_Bypass.sgmodule`
 * **AdBlock (去廣告/追蹤：網域·IP 版，免 MITM)**
   `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/AdBlock.sgmodule`
-* **AdBlock-tw (臺灣環境去廣告：URL-REGEX，需 MITM)**
-  `https://raw.githubusercontent.com/julia3q/sync/refs/heads/main/AdBlock-tw.sgmodule`
 
 ## 維護方式
 本專案僅包含可公開的清單 (`Lists/`) 與根目錄模組 (`*.sgmodule`)。
